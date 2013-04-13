@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ked</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Ked, the first Corkonian scripting language">
+	<meta name="author" content="Adam Lynch">
+
+	<!-- Le styles -->
+	<link href="assets/styles/style.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Cousine:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="shortcut icon" href="assets/img/favicon.png">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<i class="ked-icon ked-icon-crest pull-left span3"></i>
+				<h1 class="span7">Ked</h1>
+				<p class="span7">
+					To our knowledge, <code>Ked</code> is first scripting language to emerge from <a href="http://en.wikipedia.org/wiki/Cork_(city)" target="_blank">The People's Republic
+					of Cork</a>.<br/>
+					Below is an account of what we know so far about the mysterious Corkonian language.<br/>
+					Any suggested updates or contributions are encouraged.
+				</p>
+			</div>
+		</div>
+	</header>
+
+	<section class="container">
+		<div id="vars" class="row">
+			<h2 class="span12">Variables</h2>
+
+			<div class="span6">
+				<h3>Setting</h3>
+				<pre>remember €x = 1 like</pre>
+				<p>Use <code>remember</code> to initialize local variables. All variable names are prepended with the Euro symbol (<code>€</code>), also this may be subject to change.</p>
+				<p>Also, notice the line ends with <code>like</code>. This is the <code>ked</code> statement terminator, it is not optional.</p>
+			</div>
+
+			<div class="span6">
+				<h3>Unsetting</h3>
+				<pre>forget €x like</pre>
+			</div>
+
+			<div class="span6">
+				<h3>Determining if a variable is set</h3>
+				<pre>jaKnow(€x)</pre>
+				<p>Returns a <a href="#bools">Boolean</a>.</p>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div id="bools" class="span6">
+				<h2>Booleans</h2>
+
+				<p><code>gospel</code> and <code>bollocks</code> are the equivalent of <code>true</code> and <code>false</code> in other languages.</p>
+
+				<h3>Other notable differences in types<h3>
+				<ul class="unstyled">
+					<li><code>nattin</code> = <code>null</code></li>
+					<li><code>number</code> = <code>int, float, etc</code></li>
+					<li><code>list</code> = <code>array</code></li>
+					<li><code>thing</code> = <code>object</code></li>
+				</ul>
+			</div>
+
+			<div id="import" class="span6">
+				<h2>Importing</h2>
+				<p>To include one <code>ked</code> file inside another use the <code>hereLa</code> command;</p>
+				<pre>hereLa 'feen.ked' like</pre>
+
+				<p><code>cmereToMeWilla</code> does the same thing, but it will also force a fatal error if the inclusion fails;</p>
+				<pre>cmereToMeWilla 'boeur.ked' like</pre>
+			</div>
+
+			<div id="print" class="span6">
+				<h2>Printing</h2>
+
+				<pre>saysI 'Alright boy, calm down will ya' like</pre>
+				<p>This will send the string to standard output, known in <code>ked</code> as <code>The Echo</code>.</p>
+			</div>
+
+			<div id="conditionals" class="span6">
+				<h2>Conditional statements</h2>
+
+				<pre>
+eh( jaKnow( €x ) ){
+	remember €z = 1 like
+}
+orEh( jaKnow( €y ) ){
+	remember €z = 2 like
+}
+orEvenJust{
+	remember €z = 0 like
+}
+				</pre>
+			</div>
+
+			<div id="operators" class="span6">
+				<h2>Notable differences in operators</h2>
+				<ul>
+					<li><code>not</code> = negation. <code>!</code> is also a usable alias.</li>
+					<li>
+						<p><code>an</code> = <code>&&</code>, <code>AND</code>.</p>
+					</li>
+					<li>
+						<p><code>plus</code> = addition.</p>
+					</li>
+					<li>
+						<p>
+							<code>awayFrom</code> = substraction.<br/>
+							Example:
+						</p>
+						<pre>remember €x = 4 awayFrom 20 like //result: 16</pre>
+					</li>
+					<li><code>times</code> = multiplication.</li>
+					<li>
+						<p>
+							<code>into</code> = division.<br/>
+							Example:
+						</p>
+						<pre>remember €x = 4 into 20 like //result: 5</pre>
+					</li>
+					<li><code>is</code> = comparison.</li>
+					<li><code>isTheHeadOff</code> = strict comparison. Alias: <code>isTheAbsoluteHeadOff</code>.</li>
+					<li>
+						<p>
+							<code>em</code> = concatention.<br/>
+							Example:
+						</p>
+						<pre>remember €secret = 'You know' em 'your wan' like</pre>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div id="oop" class="row">
+			<h2 class="span12">Object-orienatation</h2>
+			<p class="span12">It is understood that <code>Ked</code> has object-orientated capabilities, although very little is known so far.</p>
+
+			<h3 class="span12">Self-referencing</h3>
+
+			<div class="span6">
+				<p>To reference a method of the current <code>thing</code> (i.e. <code>object</code>) you would do the following;</p>
+				<pre>youKnowYourself.doSomethin() like</pre>
+			</div>
+
+			<div class="span6">
+				<p>For a static method, you would call it like this:</p>
+				<pre>youKnowYourself::doSomethin() like</pre>
+			</div>
+
+			<h3 class="span12">Rebels</h3>
+			<p class="span12">A <code>Rebel</code> is the <code>ked</code> equivalent of an <code>>exception</code>.</p>
+
+			<div class="span6">
+				<h4>Releasing Rebels</h4>
+				<p>A.k.a throwing exceptions</p>
+				<pre>Release new Rebel("I'm gonna wreck the gaff") like</pre>
+			</div>
+
+			<div class="span6">
+				<h4>Catching Rebels</h4>
+				<p>The following is how to write a <code>try</code> - <code>catch</code> - <code>finally</code> in ked</p>
+<pre>
+giveItALash{
+
+}
+jaHearYourMan( Rebel €r ){
+
+}
+atTheEndOfTheDay{
+
+}
+</pre>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span6">
+				<h2>Sessions</h2>
+				<h3>Starting the session</h3>
+
+				<pre>session::start() like</pre>
+
+				<h3>Regenerate the session ID</h3>
+				<pre>session::topUp() like</pre>
+
+				<h3>Destroying the session</h3>
+				<pre>session::wreckTheGaff() like</pre>
+			</div>
+
+			<div class="span6">
+				<h2>Loops</h2>
+				<p>The <code>ked</code> equivalent of a <code>while</code> loop is denoted as follows;</p>
+				<pre>
+eraGoOnSure( €x is not nattin an €y is 2 ){
+
+}
+</pre>
+				<h3>Break</h3>
+				<pre>ahStop like</pre>
+
+				<h3>Continue</h3>
+				<pre>ahGoOn like</pre>
+
+			</div>
+
+			<div class="span6">
+				<h2>Other useful functions</h2>
+				<ul class="unstyled">
+					<li><code>holdOn(3) like</code> = <code>sleep(3);</code></li>
+					<li><code>iWillYa() like</code> = No-operation. Alias: <code>yaTwoMinutesThereNow() like</code></li>
+					<li><code>stopTheLights() like</code> = <code>exit;</code></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

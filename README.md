@@ -12,7 +12,7 @@ Variables are prepended with the Euro symbol, for now
 
 Include
 ```
-hereLa 'langer.ked' like
+hereLa 'feen.ked' like
 ```
 
 Require
@@ -22,8 +22,9 @@ cmereToMeWilla 'boeur.ked' like
 
 Print
 ```
-echo 'Alright boy, calm down will ya' like 
+saysI 'Alright boy, calm down will ya' like 
 ```
+saysI sends the text above to standard output, known as the echo in ked
 
 If - ElseIf - Else
 ```
